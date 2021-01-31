@@ -200,3 +200,12 @@ async function predict() {
     labelContainer.childNodes[i].innerHTML = label + bar;
   }
 }
+
+const NONE_CN = "none";
+
+const popupBtn = document.querySelector("#popup_btn"),
+  popup = document.querySelector("#popup");
+
+popupBtn.onclick = () => {
+  popup.classList.add(NONE_CN);
+};

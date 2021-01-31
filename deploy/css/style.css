@@ -15,16 +15,13 @@ body {
   font-weight: normal;
   font-style: normal;
 }
-
-.button {
-  width: 10%;
-  border: 2px dashed darkslateblue;
-  margin-left: 45.5%;
-  margin-right: 50%;
-  background-color: #f6f7fa;
-  border-radius: 10px;
+button {
+  transition: all 0.4s;
 }
-.button:focus {
+button:active {
+  transform: scale(0.9);
+}
+button:focus {
   outline: none;
 }
 .file-upload-btn {
@@ -109,10 +106,11 @@ body {
 }
 
 .file-upload-image {
-  max-height: 70%;
-  max-width: 70%;
+  width: 550px;
+  height: 600px;
   margin: auto;
   padding: 10px;
+  transition: all 0.4s;
 }
 
 .try-again-btn {
@@ -279,6 +277,82 @@ footer h2 {
   margin: 0 auto;
 }
 
+#popup {
+  width: 70%;
+  height: fit-content;
+  left: 15%;
+  top: 5vh;
+  background-color: rgba(255, 255, 255, 0.9);
+  position: fixed;
+  z-index: 10000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  border: 3px solid darkslateblue;
+  border-radius: 4px;
+  padding: 20px;
+  transition: all 0.4s;
+  font-weight: bolder;
+  font-size: 25px;
+}
+
+#popup h1 {
+  font-weight: bolder;
+  margin-bottom: 30px;
+}
+
+#popup img {
+  width: 200px;
+}
+
+#popup a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: darkslateblue;
+  margin-top: 30px;
+}
+
+#popup_btn {
+  font-size: 25px;
+  border: 3px solid darkslateblue;
+  color: darkslateblue;
+  border-radius: 4px;
+  background-color: rgba(0, 0, 0, 0);
+  margin-top: 30px;
+}
+
+#popup_btn:hover {
+  color: white;
+  background-color: darkslateblue;
+}
+
+.none {
+  display: none !important;
+}
+
+@media (max-width: 950px) {
+  #popup {
+    width: 80%;
+    left: 10%;
+  }
+}
+
+@media (max-width: 840px) {
+  #popup {
+    width: 85%;
+    left: 7.5%;
+  }
+}
+
+@media (max-width: 800px) {
+  #popup {
+    width: 90%;
+    left: 5%;
+  }
+}
+
 @media (max-width: 720px) {
   .ad {
     width: fit-content;
@@ -308,6 +382,10 @@ footer h2 {
   }
   .jocoding a {
     font-size: 20px;
+  }
+  .file-upload-image {
+    width: 330px;
+    height: 360px;
   }
 }
 
